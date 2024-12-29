@@ -21,7 +21,7 @@ const Sidebar = () => {
   return (
     <div className={sidebarClassNames}>
         {/* TOP LOGO */}
-        <div className="flex gap-3 justify-between md:justify-normal items-center pt-8">
+        <div className={`flex gap-3 justify-between md:justify-normal items-center pt-8 ${isSidebarCollapsed ? "px-5" : "px-8"}`}>
             <div>logo</div>
             <h1 className="font-extrabold text-2xl">FIRMA</h1>
             <button 
