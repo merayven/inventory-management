@@ -1,0 +1,16 @@
+[
+    {
+      "expenseByCategoryId": "0e980d1b-ae93-4a5a-b235-4dfea5f42860",
+      "expenseSummaryId": "5229a14b-443b-4551-9d01-4bc0dc820d05",
+      "date": "2023-11-23T11:54:21Z",
+      "category": "Office",
+      "amount": 48
+    },
+    {
+      "expenseByCategoryId": "076a4956-60c2-4b73-b275-530359a91cba",
+      "expenseSummaryId": "c17ff164-1ab4-41e7-91a8-8aab790dcd88",
+      "date": "2023-08-13T09:49:33Z",
+      "category": "Salaries",
+      "amount": 66
+    }
+]
