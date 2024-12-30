@@ -21,6 +21,7 @@ model Users {
 
 model Products {
   productId     String      @id
+  brand         String
   name          String
   price         Float
   size          Float
@@ -52,6 +53,7 @@ model Purchases {
 model Expenses {
   expenseId String   @id
   category  String
+  company   String?
   amount    Float
   timestamp DateTime
 }
