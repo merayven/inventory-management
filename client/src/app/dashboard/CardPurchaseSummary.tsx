@@ -4,7 +4,7 @@ import numeral from 'numeral';
 import React from 'react'
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-const CardPurschaseSummary = () => {
+const CardPurchaseSummary = () => {
     const { data, isLoading } = useGetDashboardMetricsQuery();
     const purchaseData = data?.purchaseSummary || [];
 
@@ -78,4 +78,4 @@ const CardPurschaseSummary = () => {
   )
 }
 
-export default CardPurschaseSummary
+export default CardPurchaseSummary
