@@ -13,7 +13,7 @@ const CardPopularProducts = () => {
         ): (
             <>
                 <h3 className="text-lg font-semibold px-7 pt-5 pb-2">
-                    PopularProducts
+                    Popular Products
                 </h3>
                 <hr />
                 <div className="overflow-auto h-full">
