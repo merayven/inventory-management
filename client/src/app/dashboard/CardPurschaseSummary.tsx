@@ -1,4 +1,5 @@
 import { useGetDashboardMetricsQuery } from '@/state/api'
+import { TrendingDown, TrendingUp } from 'lucide-react';
 import numeral from 'numeral';
 import React from 'react'
 
@@ -32,7 +33,11 @@ const CardPurschaseSummary = () => {
                         </div>
                         {lastDataPoint && (
                             <p className={`text-sm ${lastDataPoint.changePercentage! >= 0 ? "text-green-500" : "text-red-500"} flex ml-3`}>
-                                
+                                {lastDataPoint.changePercentage! >= 0 ? (
+                                    <TrendingUp className="w-4 h-4" />
+                                ) : (
+                                    <TrendingDown className="w-4 h-4" />
+                                )}
                             </p>
                         )}
                     </div>
