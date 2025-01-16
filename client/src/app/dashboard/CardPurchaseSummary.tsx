@@ -11,7 +11,7 @@ const CardPurchaseSummary = () => {
     const lastDataPoint = purchaseData[purchaseData.length - 1] || null;
 
   return (
-    <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl flex flex-col justify-between">
+    <div className="row-span-3 bg-white shadow-md rounded-2xl flex flex-col justify-between">
         {isLoading ? (
             <div className="m-5">Loading...</div>
         ): (
@@ -44,10 +44,10 @@ const CardPurchaseSummary = () => {
                         )}
                         </div>
                     </div>
-                    <ResponsiveContainer width="100%" height={350} className="px-7">
+                    <ResponsiveContainer width="100%" height={200} className="p-4">
                         <AreaChart
                             data={purchaseData}
-                            margin={{ top: 0, right: 0, left: -50, bottom: 45 }}
+                            margin={{ top: 0, right: 0, left: -50, bottom: 55 }}
                         >
                             <XAxis dataKey="date" tick={false} axisLine={false} />
                             <YAxis tickLine={false} tick={false} axisLine={false} />
