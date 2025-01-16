@@ -1,7 +1,7 @@
 import { useGetDashboardMetricsQuery } from '@/state/api';
 import { TrendingUp } from 'lucide-react';
 import React, { useState } from 'react'
-import { BarChart, CartesianGrid, ResponsiveContainer, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
 const CardSalesSummary = () => {
     const { data, isLoading, isError } = useGetDashboardMetricsQuery();
@@ -14,6 +14,16 @@ const CardSalesSummary = () => {
     const averageChangePercentage = saleData.reduce((acc, curr, _, array) => {
         return acc + curr.changePercentage! / array.length;
     }, 0) || 0;
+
+    const highestValueData = saleData.reduce((acc, curr) => {
+        return acc.totalValue > curr.totalValue ? acc : curr;
+    }, saleData[0] || {})
+
+    const highestValueDate = highestValueData.date ? new Date(highestValueData.date).toLocaleDateString("en-US", {
+        month: "numeric",
+        day: "numeric",
+        year: "2-digit"
+    }) : "N/A";
 
     if (isError) {
         return <div className="m-5">Failed to fetch data</div>
@@ -69,8 +79,29 @@ const CardSalesSummary = () => {
                                 return `${date.getMonth() + 1}/${date.getDate()}`;
                             }}
                             />
+                            <Tooltip formatter={(value: number) => [
+                                `$${value.toLocaleString("en")}`,
+                            ]}
+                            />
+                            <Bar
+                                dataKey="totalValue"
+                                fill="#3182ce"
+                                barSize={10}
+                                radius={[10, 10, 0, 0]}
+                            />
                         </BarChart>
                     </ResponsiveContainer>
+                </div>
+                {/* FOOTER */}
+                <div>
+                    <hr />
+                    <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
+                        <p>{saleData.length || 0} days</p>
+                        <p className="text-sm">
+                            Highest Sales Date: {" "}
+                            <span className="font-bold">{highestValueDate}</span>
+                        </p>
+                    </div>
                 </div>
             </>
         )}
