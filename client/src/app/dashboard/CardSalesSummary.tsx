@@ -55,7 +55,7 @@ const CardSalesSummary = () => {
                             </span>
                         </div>
                         <select 
-                            className="shadow-sm border border-gray-300 bg-white p-2 rounded"
+                            className="shadow-sm border border-gray-300 bg-white px-4 py-1 appearance-none"
                             value={timeframe}
                             onChange={(e) => { setTimeframe(e.target.value); }}
                         >
