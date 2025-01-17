@@ -166,7 +166,7 @@ const CardSalesSummary: React.FC = () => {
                         <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
                             <p>{saleData.length || 0} entries</p>
                             <p className="text-sm">
-                                Highest Sales Date: <span className="font-bold">{highestValueDate}</span>
+                                Highest Sales: <span className="font-bold">{highestValueDate}</span>
                             </p>
                         </div>
                     </div>
