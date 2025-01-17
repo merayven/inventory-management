@@ -21,7 +21,6 @@ const getDashboardMetrics = (req, res) => __awaiter(void 0, void 0, void 0, func
             },
         });
         const salesSummary = yield prisma.salesSummary.findMany({
-            take: 2,
             orderBy: {
                 date: "desc",
             },
