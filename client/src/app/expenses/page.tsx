@@ -82,7 +82,38 @@ const Expenses = () => {
                                 </div>
                             </div>
                         </div>
+
+                        <div>
+                            <label htmlFor="start-date" className={classNames.label}>
+                                Start Date
+                            </label>
+                            <div className={classNames.selectContainer}>
+                                <input
+                                    name="start-date"
+                                    type="date"
+                                    id="start-date"
+                                    className={classNames.selectInput}
+                                    onChange={(e) => setStartDate(e.target.value)}
+                                />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label htmlFor="end-date" className={classNames.label}>
+                                End Date
+                            </label>
+                            <div className={classNames.selectContainer}>
+                                <input
+                                    name="end-date"
+                                    type="date"
+                                    id="end-date"
+                                    className={classNames.selectInput}
+                                    onChange={(e) => setEndDate(e.target.value)}
+                                />
+                            </div>
+                        </div>
                     </div>
+                    {/* CHART */}
                 </div>
             </div>
         </div>
