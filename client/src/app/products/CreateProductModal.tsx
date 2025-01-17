@@ -123,7 +123,7 @@ const CreateProductModal = ({ isOpen, onClose, onCreate }: CreateProductModalPro
                         required 
                     />
 
-                    <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
+                    <button type="submit" className="mt-2 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700">
                         Create
                     </button>
                     <button onClick={onClose} type="button" className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-700">
