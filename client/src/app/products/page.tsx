@@ -25,7 +25,7 @@ const Products = () => {
 
     return (
         <div className="mx-auto pb-5 w-full">
-            <div className="flex items-center border-2 border-gray-200 rounded">
+            <div className="flex items-center border-2 border-gray-200 rounded mb-4">
                 <SearchIcon className="w-5 h-5 text-gray-500 m-2" />
                 <input className="w-full py-2 px-4 rounded bg-white" placeholder="Search product..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
             </div>
