@@ -8,6 +8,14 @@ export interface Product {
     size: number;
     stockQuantity: number;
   }
+
+export interface NewProduct {
+  brand: string;
+  name: string;
+  price: number;
+  size: number;
+  stockQuantity: number;
+}
   
   export interface NewProduct {
     brand: string;
@@ -68,7 +76,15 @@ export const api = createApi({
           }),
           providesTags: ["Products"]
       }),
+      createProduct: build.mutation<Product, NewProduct>({
+        query: (newProduct) => ({
+          url: "/products",
+          method: "POST",
+          body: newProduct
+        }),
+        invalidatesTags: ["Products"]
+      })
     }),
 })
 
-export const { useGetDashboardMetricsQuery } = api;
+export const { useGetDashboardMetricsQuery, useGetProductsQuery, useCreateProductMutation } = api;
