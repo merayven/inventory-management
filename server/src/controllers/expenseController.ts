@@ -3,7 +3,7 @@ import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient();
 
-export const getExpensesMetrics = async (
+export const getExpenseByCategory = async (
     req: Request,
     res: Response
 ): Promise<void> => {

@@ -9,10 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getExpensesMetrics = void 0;
+exports.getExpenseByCategory = void 0;
 const client_1 = require("@prisma/client");
 const prisma = new client_1.PrismaClient();
-const getExpensesMetrics = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const getExpenseByCategory = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const expenseByCategorySummaryRaw = yield prisma.expenseByCategory.findMany({
             orderBy: {
@@ -26,4 +26,4 @@ const getExpensesMetrics = (req, res) => __awaiter(void 0, void 0, void 0, funct
         res.status(500).json({ message: "Error retrieving expenses by category" });
     }
 });
-exports.getExpensesMetrics = getExpensesMetrics;
+exports.getExpenseByCategory = getExpenseByCategory;
