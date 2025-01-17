@@ -16,7 +16,9 @@ const Expenses = () => {
 
     const classNames = {
         label: "block text-sm font-medium text-gray-700",
-        selectInput: "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md appearance-none",
+        selectContainer: "relative mt-1",
+        selectInput: "block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md appearance-none",
+        arrowIcon: "absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-500",
     }
 
     if (isLoading) {
@@ -50,12 +52,35 @@ const Expenses = () => {
                             <label htmlFor="category" className={classNames.label}>
                                 Category
                             </label>
-                            <select name="category" id="category" className={classNames.selectInput} defaultValue="All" onChange={(e) => setSelectedCategory(e.target.value)}>
-                                <option>All</option>
-                                <option>Office</option>
-                                <option>Professional</option>
-                                <option>Salaries</option>
-                            </select>
+                            <div className={classNames.selectContainer}>
+                                <select
+                                    name="category"
+                                    id="category"
+                                    className={classNames.selectInput}
+                                    defaultValue="All"
+                                    onChange={(e) => setSelectedCategory(e.target.value)}
+                                >
+                                    <option>All</option>
+                                    <option>Office</option>
+                                    <option>Professional</option>
+                                    <option>Salaries</option>
+                                </select>
+                                {/* Arrow Icon */}
+                                <div className={classNames.arrowIcon}>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="h-5 w-5"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -64,4 +89,4 @@ const Expenses = () => {
     )
 }
 
-export default Expenses
+export default Expenses;
