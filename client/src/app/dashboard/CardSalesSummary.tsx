@@ -33,12 +33,12 @@ const CardSalesSummary: React.FC = () => {
             let key: string;
 
             if (timeframe === 'daily') {
-                key = date.toISOString().split('T')[0]; // YYYY-MM-DD
+                key = date.toISOString().split('T')[0];
             } else if (timeframe === 'weekly') {
                 const week = Math.ceil((date.getDate() - date.getDay()) / 7);
                 key = `${date.getFullYear()}-W${week}`;
             } else {
-                key = `${date.getFullYear()}-${date.getMonth() + 1}`; // YYYY-MM
+                key = `${date.getFullYear()}-${date.getMonth() + 1}`;
             }
 
             if (!groupedData[key]) {
