@@ -3,16 +3,16 @@
       "purchaseId": "5035f91e-4a29-411a-8779-17f6105675f1",
       "productId": "d35623ee-bef6-42b2-8776-2f99f8bb4782",
       "timestamp": "2007-09-28T13:56:51Z",
-      "quantity": 875,
-      "unitCost": 4163.31,
-      "totalCost": 7871.43
+      "quantity": 10,
+      "unitCost": 120.00,
+      "totalCost": 1200.00
     },
     {
       "purchaseId": "85841cb5-2132-40f2-b923-9769ee3c199b",
       "productId": "8ac1ac77-7358-425e-be16-0bdde9f02e59",
       "timestamp": "2015-02-01T13:04:43Z",
-      "quantity": 471,
-      "unitCost": 5673.17,
-      "totalCost": 485.48
+      "quantity": 5,
+      "unitCost": 100.00,
+      "totalCost": 500.00
     }
 ]

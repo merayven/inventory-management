@@ -1,12 +1,12 @@
 [
     {
       "expenseSummaryId": "5229a14b-443b-4551-9d01-4bc0dc820d05",
-      "totalExpenses": 40749250.15,
+      "totalExpenses": 200.50,
       "date": "2022-08-23T23:59:13Z"
     },
     {
       "expenseSummaryId": "c17ff164-1ab4-41e7-91a8-8aab790dcd88",
-      "totalExpenses": 82516685.25,
+      "totalExpenses": 112.15,
       "date": "2021-12-28T17:03:47Z"
     }
 ]

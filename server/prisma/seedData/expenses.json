@@ -3,14 +3,14 @@
       "expenseId": "5c1121d7-20c8-4890-81c0-949bd60523a3",
       "category": "Salaries",
       "company": "Josef Seibel",
-      "amount": 1489153.5,
+      "amount": 100.0,
       "timestamp": "2022-08-27T18:35:57Z"
     },
     {
       "expenseId": "4529aaef-39d0-4188-9256-8c8fd5bad7ca",
       "category": "Office",
       "company": "Adidas",
-      "amount": 1579039.97,
+      "amount": 10.0,
       "timestamp": "2020-05-12T19:39:50Z"
     }
 ]

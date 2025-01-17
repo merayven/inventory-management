@@ -5,7 +5,7 @@
       "name": "Pinkscale Blazing Star",
       "price": 456.04,
       "size": 38.0,
-      "stockQuantity": 124834
+      "stockQuantity": 20
     },
     {
       "productId": "8ac1ac77-7358-425e-be16-0bdde9f02e59",
@@ -13,6 +13,6 @@
       "name": "Gila Milkvetch",
       "price": 899.05,
       "size": 42.0,
-      "stockQuantity": 799402
+      "stockQuantity": 15
     }
 ]
