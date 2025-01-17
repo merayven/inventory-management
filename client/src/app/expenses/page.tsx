@@ -78,7 +78,7 @@ const Expenses = () => {
             </div>
 
             <div className="flex flex-col md:flex-row">
-                <div className="w-full md:w-1/3 bg-white shadow rounded-lg p-6">
+                <div className="w-full md:w-1/3 bg-white shadow rounded-lg p-12">
                     <h3 className="text-lg font-semibold mb-4">
                         Filter By Category and Date
                     </h3>
@@ -150,7 +150,7 @@ const Expenses = () => {
                     </div>
                 </div>
                 {/* CHART */}
-                <div className="flex-grow bg-white shadow rounded-lg p-4 md:p-6">
+                <div className="flex-grow bg-white shadow rounded-lg sm:ml-6 md:p-6">
                     <ResponsiveContainer width="100%" height={400}>
                         <PieChart>
                             <Pie
