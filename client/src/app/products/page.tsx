@@ -48,7 +48,9 @@ const Products = () => {
                             <div className="flex flex-col items-center">
                                 img
                                 <h3 className="text-lg text-gray-900 font-semibold">{product.name}</h3>
-                                <p className="text-gray-800">${product.price.toFixed(2)}</p>
+                                <h4 className="text-gray-700">{product.brand}</h4>
+                                <p className="mt-1">Size: <span className="font-semibold">{product.size}</span></p>
+                                <p className="text-gray-800 pt-1">${product.price.toFixed(2)}</p>
                                 <div className="text-sm text-gray-600 mt-1">
                                     Stock: {product.stockQuantity}
                                 </div>
