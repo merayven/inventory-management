@@ -60,7 +60,7 @@ const Products = () => {
                     products?.map((product) => (
                         <div key={product.productId} className=" border shadow rounded-md p-4 max-w-full w-full mx-auto">
                             <div className="flex flex-col items-center">
-                                img
+                                <img src="" alt="" className="w-20 h-20" />
                                 <h3 className="text-lg text-gray-900 font-semibold">{product.name}</h3>
                                 <h4 className="text-gray-700">{product.brand}</h4>
                                 <p className="mt-1">Size: <span className="font-semibold">{product.size}</span></p>
